@@ -3,7 +3,7 @@ import os
 import streamlit as st
 import pickle
 import time
-from langchain import OpenAI
+from langchain_openai import OpenAI
 from langchain.chains import RetrievalQAWithSourcesChain
 from langchain_text_splitter import RecursiveCharacterTextSplitter
 from langchain.document_loaders import UnstructuredURLLoader
@@ -68,3 +68,4 @@ if query:
                 sources_list = sources.split("\n")  # Split the sources by newline
                 for source in sources_list:
                     st.write(source)
+
